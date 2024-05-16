@@ -1,0 +1,387 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #101018
+}
+
+main {
+    background-color: #000000;
+}
+
+/****NAVBAR****/
+
+nav {
+    width: 100%;
+    height: 100px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    align-items: center;
+    background-color: #000000;
+    /* border: solid 2px red; */
+}
+
+nav li {
+    display: inline-block;
+    padding-right: 3%;
+    position: relative;
+}
+
+nav li:first-child{
+    margin-right: auto;
+    color: #f4f4f4;
+    cursor: pointer;
+    font-family: "Lato";
+    font-size: 20px;
+}
+
+nav li img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: all .5s ease-in-out;
+}
+
+nav li img:hover{
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+nav li button{
+    padding: 0px 10px;
+    background: rgb(0, 0, 0);
+    background-image: linear-gradient(to left, #4911cb, #2575fc,#4911cb);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: #f4f4f4;
+    font-family:"Bebas Neue";
+    font-size: 28px;
+    background-size: 200%;
+    transition: 0.5s;
+}
+
+nav li button:hover{
+    background-position: right;
+}
+
+
+
+/****LANDING-PAGE****/
+
+#landing-page{
+    z-index: 998;
+    height: 90vh;
+    width: 100vw;
+    position: relative;
+
+    /* border: solid 2px rgb(24, 51, 104); */
+}
+
+#landing-page .background{
+    display: none;
+    width: 100vw;
+    height: 100%;
+    background: url("../studio.jpg");
+    background-position: 0% 70%;
+    filter: blur(8px);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#landing-page .background_video {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    
+}
+
+.text-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+}
+
+.text-box h2{
+    width: fit-content;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    /* background: -webkit-linear-gradient(#f03c2e, #fc5621); */
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family:"Bebas Neue";
+    font-size: 220px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+/****PHOTO-GALLERY****/
+
+#gallery{
+    width: 90%;
+    position: relative;
+    margin: 30px auto 0 auto;
+    /* border: 2px solid green; */
+}
+
+.photos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photos img {
+    margin: 1%;
+    width: 31%;
+    border-radius: 5px;
+}
+
+
+
+/****VIDEO-GALLERY****/
+#video_gallery {
+    width: 90%;
+    /* border: solid 2px #11cb71; */
+    margin: 20px auto 0 auto;
+}
+
+.boxes {
+    width: 100%;
+    height: 1800px;
+    margin: 10px auto;
+    /* border: dotted 2px royalblue; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 3%;
+}
+
+@keyframes scalebox {
+    from {scale: 0;}
+    to {scale: 1;}
+}
+
+.boxes .box {
+    width: 30%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+}
+
+.boxes .box:nth-child(2){
+    transition-delay: 200ms;
+}
+.boxes .box:nth-child(3){
+    transition-delay: 400ms;
+}
+.boxes .box:nth-child(5){
+    transition-delay: 200ms;
+}
+.boxes .box:nth-child(6){
+    transition-delay: 400ms;
+}
+.boxes .box:nth-child(8){
+    transition-delay: 200ms;
+}
+.boxes .box:nth-child(9){
+    transition-delay: 400ms;
+}
+
+.boxes .box img {
+    position: absolute;
+    left: -30%;
+    height: 100%;
+}
+
+.boxes .box .textbox{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-family: "Bebas Neue";
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    line-height: 1;
+}
+
+.boxes .box .textbox h2 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.boxes .box .textbox h3{
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.boxes .box .textbox h4 {
+    cursor:pointer;
+    background: rgb(0, 0, 0);
+    background-image: linear-gradient(to left, #4911cb, #2575fc,#4911cb);
+    background-size: 200%;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 35px;
+    font-weight: 400;
+    margin-top: 3%;
+    padding: 5px 10px;
+    transition: .5s;
+}
+
+.boxes .box .textbox h4:hover{
+    background-position: right;
+}
+
+.boxes .box .textbox h4 a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.boxes .box .textbox:hover{
+    opacity: 1 !important;
+}
+
+
+
+/****FOOTER****/
+
+footer {
+    height: 250px;
+    position: relative;
+    width: 100vw;
+    background-color: #101018;
+}
+
+footer .textbox{
+    position: absolute;
+    display: flex;
+    bottom: 50%;
+    transform: translateY(50%);
+    padding-bottom: 5%;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    border-bottom: 2px solid white;
+    text-align: center;
+}
+
+footer .textbox h2 {
+    color: white;
+    font-size: 30px;
+    font-family: "Lato";
+    font-weight: light;
+}
+
+footer .email h2{
+    padding-bottom: 2px;
+}
+
+footer .number  {
+    text-align: center;
+    line-height: 0.8;
+    margin-right: 10%;
+}
+
+footer .email {
+    margin-left: 10%;
+    border-bottom: 2px solid white;
+}
+
+footer .number h3{
+    font-size: 15px;
+    color: white;
+    font-family: "arial";
+    font-style: italic;
+}
+
+
+
+/****SOCIALS****/
+#socials{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    height: 100px;
+}
+
+#socials ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#socials ul li a{
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+#socials ul li{
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+
+#socials ul li {
+    display: inline-block;
+}
+
+
+/***JAVASCRIPT***/
+
+.hidden {
+    opacity: 0;
+    transition: 1.5s;
+    transform: translateX(-100%);
+    filter: blur(5px);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0px);
+}
+
+.animatable {
+    opacity: 0;
+    transition: all 1s
+}
+
+.animate {
+    opacity: 1;
+}
