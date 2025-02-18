@@ -1,0 +1,489 @@
+/* FONTS & VARIABLES */
+@font-face {
+    font-family: ProximaNova;
+    src: url("../resources/proximanova_black.otf");
+}
+
+:root {
+    --main-bg-color: rgb(0, 0, 0);
+    --main-text-color: rgb(255,255,255);
+    --main-text-hover: rgb(205, 205, 205);
+}
+
+body {
+    background-color: var(--main-bg-color);
+    overflow-x: hidden;
+    box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header{
+    background-color: var(--main-bg-color);
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+
+    width: 100vw;
+    height: 80px;
+}
+
+header ul{
+    height: 100%;
+    padding: 0% 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header ul li{
+    display: inline;
+    margin-right: 30px;
+    
+    user-select: none;
+}
+
+header ul li:first-child{
+    margin-right:auto;
+}
+
+header ul li h1{
+    display: inline;
+    color: var(--main-text-color);
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 40px;
+
+    
+}
+
+header ul li h1 span{
+    font-weight: 500;
+}
+
+header ul li a {
+    color: var(--main-text-hover);
+    text-decoration: none;
+
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 32px;
+
+    transition: all .25s linear;
+}
+
+header ul li a:hover{
+    color: var(--main-text-color);
+}
+
+/* LANDING-PAGE */
+#landing-page {
+    width: 100%;
+    height: calc(100vh - 80px);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#landing-page h1{
+    font-family: "ProximaNova";
+    color: var(--main-text-color);
+    font-size: 135px;
+}
+
+#landing-page h2{
+    font-family: "ProximaNova";
+    font-size: 95px;
+    font-weight: bold;
+    color: transparent; /* Makes the fill invisible */
+    -webkit-text-stroke: 2px rgb(255, 255, 255); /* Outline thickness and color */
+}
+
+#background_video {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    width: 100vw;
+    height: 100%;
+    filter: opacity(80%);
+}
+
+#background_video video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* IMAGES ON TOP */
+.popup-image {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    width: 35%;
+    aspect-ratio: 4 / 5;
+}
+
+.popup-image span {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.popup-image img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+/* IMAGES */
+
+#images {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.image {
+    width: 33.3%;
+}
+
+.image img {
+    height: 100%;
+    scale: 0.90;
+    width: 100%;
+    object-fit: cover;
+}
+
+.image.row1 img{
+    filter: grayscale(100%);
+    transition: all 0.5s linear;
+}
+
+.image.row1 img:hover{
+    filter: grayscale(0%);
+}
+
+.image.row2 img{
+    filter: grayscale(0%);
+    transition: all 0.5s linear;
+}
+
+.image.row2 img:hover{
+    filter: grayscale(100%);
+}
+
+
+/* ŠTĚPÁNŠTÍ KOLEDNÍCI */
+
+#stepansti_kolednici {
+    position: relative;
+}
+
+.bg {
+    height: 210px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 20px 0px;
+}
+
+.bg h1{
+    font-size: 128px;
+    font-family: "ProximaNova";
+    color: var(--main-text-color);
+}
+
+.bg1::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("/resources/BGs/Polesovice_2024.jpeg");
+    filter: opacity(80%);
+    z-index: -1;
+    }
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+    padding: 0% 5%;
+    height: 80%;
+}
+
+.box {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    margin-bottom: 1.5vw;
+    background-color: rgba(0, 0, 255, 0);
+    /* flex: 1 0 21% */
+    transition: 0.5s all linear;
+}
+
+.box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgbA(0, 0, 0, .20);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+
+    opacity: 0; /* Skrytý stav */
+    visibility: hidden; /* Skrytý stav */
+}
+
+.box_hover img {
+    height: 200px;
+    width: 200px;
+}
+
+.box_hover h1{
+    font-family: "ProximaNova";
+    color: var(--main-text-color);
+    font-size: 72px;
+    text-align: center;
+}
+.box_hover p{
+    font-family: "Roboto";
+    color: var(--main-text-color);
+    font-weight: 200;
+    font-size: 28px;
+}
+
+.boxSmall h1 {
+    font-size: 42px;
+}
+
+/* SVATBY */
+
+#weddings {
+    position: relative;
+}
+
+.bg2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    background-image: url("/resources/BGs/wedding.png");
+    filter: opacity(80%);
+    z-index: -1;
+}
+
+.boxWedding h1{
+    font-size: 40px;
+}
+
+.boxWeddingSmaller h1 {
+    font-size: 36px;
+}
+
+.boxExtraSmaller h1 {
+    font-size: 32px;
+}
+
+/* CINEMATOGRAPHY */
+
+#cinematography {
+    position: relative;
+}
+
+.bg3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    background-image: url("/resources/BGs/cinematography.png");
+    filter: opacity(80%);
+    z-index: -1;
+}
+
+.bg4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    background-image: url("/resources/BGs/videoklipy.png");
+    background-position: center;
+    filter: opacity(80%);
+    z-index: -1;
+}
+
+/* VIDEOKLIPY */
+
+#videoklipy {
+    position: relative;
+}
+
+
+/* FOOTER */
+
+footer{
+    position: relative;
+    height: 300px;
+    overflow-x: hidden;
+}
+
+.text {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #ffff;
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+.footer-contact {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-contact h1 {
+    color: #ffff;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 36px;
+}
+
+
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("/resources/photos/waves.webp");
+    background-size: 1000px 100px;
+}
+
+.wave.wave1 {
+    animation: animate 45s linear infinite;
+    z-index: 999;
+    opacity: 1;
+    animation-delay: 0s;
+}
+
+.wave.wave2 {
+    animation: animate2 30s linear infinite;
+    z-index: 998;
+    opacity: .5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+.wave.wave3 {
+    animation: animate3 45s linear infinite;
+    z-index: 997;
+    opacity: .2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+.wave.wave2 {
+    animation: animate2 20s linear infinite;
+    z-index: 996;
+    opacity: .7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+@keyframes CSSScrollReveal {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+}
+
+    

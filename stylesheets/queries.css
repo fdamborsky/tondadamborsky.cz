@@ -1,0 +1,140 @@
+@media only screen and (max-width: 1600px){
+    .bg h1{
+        font-size: 94px;
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    #landing-page h1{
+        font-size: 108px;
+    }
+    #landing-page h2{
+        font-size: 72px;
+    }
+    .wrapper {
+        width: 50%;
+    }
+    .bg1::before{
+        background-size: cover;
+        background-position: bottom;
+    }
+    .box_hover {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 1200px){
+    header ul li{
+        display: none;
+    }
+    header ul li:first-child {
+        display: inline;
+    }
+    header ul li:last-child {
+        display: inline;
+    }
+    #landing-page h1{
+        font-size: 80px;
+    }
+    #landing-page h2{
+        font-size: 58px;
+    }
+    .wrapper {
+        width: 60%;
+    }
+    .bg h1{
+        font-size: 72px;
+    }
+    .bg {
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    #landing-page h1{
+        font-size: 64px;
+    }
+    #landing-page h2{
+        font-size: 42px;
+        -webkit-text-stroke: 1px rgb(255, 255, 255);
+    }
+    .image {
+        width: 50%;
+    }
+    .wrapper {
+        width: 70%;
+    }
+    .bg h1{
+        font-size: 56px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    #landing-page h1{
+        font-size: 52px;
+    }
+    #landing-page h2{
+        font-size: 36px;
+    }
+    .bg h1{
+        font-size: 48px;
+    }
+    .box_hover img {
+        height: 150px;
+        width: 150px;
+    }
+    .box_hover h1{
+        font-size: clamp(12px, 1.75rem, 64px);
+    }
+    .box_hover p {
+        font-size: 24px !important;
+    }
+    .box {
+        height: 300px;
+        width: 300px;
+        margin-bottom: 20px;
+    }
+    .box_hover{
+        background-color: rgbA(0, 0, 0, .35);
+    }
+}
+
+@media only screen and (max-width: 600px){
+    header ul li h1{
+        font-size: 20px;
+    }
+    header ul li a{
+        font-size: 20px;
+    }
+    #landing-page h1{
+        font-size: 48px;
+        text-align: center;
+    }
+    #landing-page h2{
+        font-size: 26px;
+        -webkit-text-stroke: .75px rgb(255, 255, 255);
+        text-align: center;
+    }
+    .bg h1{
+        font-size: 38px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    header ul li{
+        margin: 0;
+    }
+   
+    .wrapper {
+        width: 80%;
+    }
+    #landing-page h2{
+        font-size: 26px;
+        -webkit-text-stroke: .25px rgb(255, 255, 255);
+        text-align: center;
+    }
+
+}

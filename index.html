@@ -3,174 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Nabízím služby nahrávacího studia, ozvučení akcí, zpracování a tvorbu videa, fotografické práce.">
+    <meta name="keywords" content="ozvučení, zvukařina, videoklipy">
+    <meta name="author" content="Antonín Damborský">
+    <!-- SEO -->
+    <meta property="og:title" content="Tonda Damborský">
+    <meta property="og:description" content="Nabízím služby nahrávacího studia, ozvučení akcí, zpracování a tvorbu videa, fotografické práce.">
+    <meta property="og:url" content="https://tondadamborsky.cz">
+    <meta property="og:type" content="website">
+    <!-- CSS -->
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/queries.css">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     <title>Tonda Damborský</title>
-    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/queries.css">
-    <link rel="stylesheet" href="css/grid.css">
-    <script defer src="app.js"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
 </head>
-
 <body>
-    <nav>
-        <li><h2>LOGO</h2></li>
+    <div class="loader"></div>
 
-        <li class="hideOnMobile"><a target="_blank" href="https://www.instagram.com/tonda_damborsky/">
-            <img src="images/socials/instagram.svg" alt="logo instagramu"></a>
-        </li>
-
-        <li class="hideOnMobile"><a target="_blank" href="https://www.facebook.com/tonda.damborsky">
-            <img src="images/socials/facebook.svg" alt="logo facebooku"></a>
-        </li>
-
-        <li class="hideOnMobile"><a target="_blank" href="https://www.youtube.com/@TondaDamborsky">
-            <img src="images/socials/youtube.svg" alt="logo YouTube"></a>
-        </li>
-
-        <li><a href="#socials"><button>Kontakt </button></a></li>
-    </nav>
+    <header>
+        <ul>
+            <li><h1>TONDA<span>DAMBORSKÝ</span></h1></li>
+            <li><a href="">//youtube</a></li>
+            <li><a href="">//facebook</a></li>
+            <li><a href="">//instagram</a></li>
+            <li><a href="">//kontakt</a></li>
+        </ul>
+    </header>
 
     <main>
         <div id="landing-page">
-            <div class="background"></div>
-            <div class="background_video">
+            <h1>FILM & MUSIC VIDEO</h1>
+            <h2>LIVE / STUDIO SOUNDMIXING</h2>
+            <div id="background_video">
                 <video autoplay loop muted playsinline>
-                    <source src="video/bg_video2.webm" type="video/webm">
+                    <source src="/resources/video/bg_video2.webm" type="video/webm">
                 </video>
             </div>
-            <div class="text-box">
-                <h2><span>FILM&nbsp;&&nbsp;MUSIC&nbsp;VIDEO</span><br>
-                LIVE&nbsp;/&nbsp;STUDIO&nbsp;SOUNDMIXING</h2>
+        </div>
+
+        
+
+        <div class="popup-image">
+            <div class="wrapper">
+                <span><img src="/resources/close.svg" alt=""></span>
+                <img class="mainImage" src="resources/photos/grande.webp" alt="">
             </div>
         </div>
 
-        <div id="gallery">
-            <div class="photos">
-                <img src="images/photos/img (1).png" alt="" class="img1 animatable">
-                <img src="images/photos/img (2).png" alt="" class="img2 animatable">
-                <img src="images/photos/img (3).png" alt="" class="img3 animatable">
-                <img src="images/photos/img (4).png" alt="" class="img4 animatable">
-                <img src="images/photos/img (5).png" alt="" class="img5 animatable">
-                <img src="images/photos/img (6).png" alt="" class="img6 animatable">
-            </div>
+        <div id="images">
+            <div class="image row1"><img src="/resources/photos/koncert1.webp" alt="" loading="lazy"></div>
+            <div class="image row1"><img src="/resources/photos/grande.webp" alt="" loading="lazy"></div>
+            <div class="image row1"><img src="/resources/photos/grande2.webp" alt="" loading="lazy"></div>
+            <div class="image row2"><img src="/resources/photos/studio1.webp" alt="" loading="lazy"></div>
+            <div class="image row2"><img src="/resources/photos/studio2.webp" alt="" loading="lazy"></div>
+            <div class="image row2"><img src="/resources/photos/studio3.webp" alt="" loading="lazy"></div> 
         </div>
 
-        <div id="video_gallery">
+        <div id="stepansti_kolednici" class="hidden">
+            <div class="bg bg1">
+                <h1>ŠTĚPÁNŠTÍ KOLEDNÍCI</h1>
+            </div>
             <div class="boxes">
-                <div class="first box hidden">
-                    <img src="images/videos/the_tails.png" alt="">
-                    <div class="textbox">
-                        <h2>KLUCI Z <br>NEÚSPĚŠNÉ KAPELY</h2>
-                        <h3>The Tails</h3>
-                        <h4><a href="https://www.youtube.com/watch?v=nxJuKR5Yr4U&ab_channel=TheTails" target="_blank">ZOBRAZIT</a></h4>
-                    </div>
+
+                <div class="box">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="" loading="lazy">
+                        <h1>OVEČKY</h1>
+                        <p>ŠTĚPÁNŠTÍ KOLEDNÍCI</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/ovecky.webp" alt="" loading="lazy">
                 </div>
 
-                <div class="second box hidden">
-                    <img src="images/videos/ragdoll.png" alt="">
-                    <div class="textbox">
-                        <h2>HELLO EVERYBODY</h2>
-                        <h3>RAGDOLL</h3>
-                        <h4><a href="https://www.youtube.com/watch?v=KJHGb6hs0xk&ab_channel=Ragdoll" target="_blank">ZOBRAZIT</a></h4>
-                    </div>
+                <div class="box">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="" loading="lazy">
+                        <h1>PASTÝŘI</h1>
+                        <p>ŠTĚPÁNŠTÍ KOLEDNÍCI</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/pastyri.webp" alt="" loading="lazy">
                 </div>
 
-                <div class="third box hidden">
-                    <img src="images/videos/stepansti_kolednici.png" alt="">
-                    <div class="textbox">
-                        <h2>VINŠUJEME VÁM</h2>
-                        <h3>ŠTĚPÁNŠTÍ KOLEDNÍCI</h3>
-                        <h4><a href="https://youtu.be/xGEkJFiwl5U?si=NN-YWaVjau82MLeV" target="_blank">ZOBRAZIT</a></h4>
-                    </div>
+                <div class="box boxSmall">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="" loading="lazy">
+                        <h1>EJ Z POZA BUKA</h1>
+                        <p>ŠTĚPÁNŠTÍ KOLEDNÍCI</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/ej_z_poza_buka.webp" alt="" loading="lazy">
                 </div>
 
-                <div class="fourth box hidden">
-                    <img src="images/videos/patos.png" alt="">
-                    <div class="textbox">
-                        <h2>PATOS</h2>
-                        <h3>21 GRAMŮ</h3>
-                        <h4><a href="https://www.youtube.com/watch?v=p7KSWZ7u2v4&ab_channel=21Gram%C5%AF" target="_blank">ZOBRAZIT</a></h4>
-                    </div>
+                <div class="box boxSmall">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="" loading="lazy">
+                        <h1>V CHUDÉ STÁJI</h1>
+                        <p>ŠTĚPÁNŠTÍ KOLEDNÍCI</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/v_chude_staji.webp" alt="" loading="lazy">
                 </div>
 
-                <div class="fifth box hidden">
-                    <img src="images/videos/crazze.png" alt="">
-                    <div class="textbox">
-                        <h2>THE OATH</h2>
-                        <h3>CraZze</h3>
-                        <h4><a href="https://www.youtube.com/watch?v=62cFnPkiguE&ab_channel=CraZzeofficial" target="_blank">ZOBRAZIT</a></h4>
-                    </div>
+                <div class="box">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>SKOŘÁPKY</h1>
+                        <p>ŠTĚPÁNŠTÍ KOLEDNÍCI</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/skorapky.webp" alt="" loading="lazy">
                 </div>
 
-                <div class="sixth box hidden">
-                    <img src="images/videos/stepansti_kolednici2.png" alt="">
-                    <div class="textbox">
-                        <h2>skořápky</h2>
-                        <h3>ŠTĚPÁNŠTÍ KOLEDNÍCI</h3>
-                        <h4><a href="https://www.youtube.com/watch?v=4SvJhhfO3_Q&ab_channel=%C5%A0t%C4%9Bp%C3%A1n%C5%A1t%C3%ADKoledn%C3%ADci" target="_blank">ZOBRAZIT</a></h4>
-                    </div>
+                <div class="box boxSmall">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>BRATŘE JURO</h1>
+                        <p>ŠTĚPÁNŠTÍ KOLEDNÍCI</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/bratre_juro.webp" alt="" loading="lazy">
                 </div>
 
-                 <div class="seventh box hidden">
-                    <img src="images/videos/jizni_morava.png" alt="">
-                    <div class="textbox">
-                        <h2>jižní morava</h2>
-                        <h3>cinematography</h3>
-                        <h4><a href="https://www.youtube.com/watch?v=0_Hea616vFU&ab_channel=TondaDamborsky" target="_blank">ZOBRAZIT</a></h4>
-                    </div>
+                <div class="box boxSmall">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>VINŠUJEM VÁM</h1>
+                        <p>ŠTĚPÁNŠTÍ KOLEDNÍCI</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/vinsujem_vam.webp" alt="" loading="lazy">
                 </div>
 
-                <div class="eighth box hidden">
-                    <img src="images/videos/slope.png" alt="">
-                    <div class="textbox">
-                        <h2>Orlické hory</h2>
-                        <h3>cinematography</h3>
-                        <h4><a href="https://www.youtube.com/watch?v=VUviYRTqEA8&ab_channel=TondaDamborsky" target="_blank">ZOBRAZIT</a></h4>
-                    </div>
-                </div>
-
-                <div class="ninth box hidden">
-                    <img src="images/videos/vanocni_trhy.png" alt="">
-                <div class="textbox">
-                    <h2>Vánoční trhy</h2>
-                    <h3>cinematography</h3>
-                    <h4><a href="https://www.youtube.com/watch?v=-XgE1mQ1aY4&t=56s&ab_channel=TondaDamborsky" target="_blank">ZOBRAZIT</a></h4>
-                </div></div>
-                
-
+                <div class="box boxSmall">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>EJ CO TO ZAZNÍVÁ</h1>
+                        <p>ŠTĚPÁNŠTÍ KOLEDNÍCI</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/ej_co_to_zazniva.png" alt="" loading="lazy">
+                </div>  
             </div>
+        </div>
+
+        <div id="weddings" class="hidden">
+            <div class="bg bg2">
+                <h1>SVATBY</h1>
+            </div>
+
+            <div class="boxes">
+
+                <div class="box boxWedding">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>MÍŠA & MIREK    </h1>
+                        <p></p>
+                    </div></a>
+                    <img src="/resources/videos_photos/Misa_Mirek.webp" alt="" loading="lazy">
+                </div>
+                <div class="box boxWeddingSmaller">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>KRISTÝNA & PATRIK</h1>
+                        <p></p>
+                    </div></a>
+                    <img src="/resources/videos_photos/Kristyna_Patrik.webp" alt="" loading="lazy">
+                </div>
+                <div class="box boxWeddingSmaller">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>CLAUDIE & RADOMÍR</h1>
+                        <p></p>
+                    </div></a>
+                    <img src="/resources/videos_photos/Claudie_Radomir.webp" alt="" loading="lazy">
+                </div>
+                <div class="box boxWedding">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>JELENA A LUKÁŠ</h1>
+                        <p></p>
+                    </div></a>
+                    <img src="/resources/videos_photos/jelenaaLukas.png" alt="" loading="lazy">
+                </div>
+
+            </div> 
+
+        </div>
+
+        <div id="cinematography" class="hidden">
+            <div class="bg bg3">
+                <h1>CINEMATOGRAPHY</h1>
+            </div>
+
+            <div class="boxes">
+
+                <div class="box boxSmall">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>JIŽNÍ MORAVA</h1>
+                        <p></p>
+                    </div></a>
+                    <img src="/resources/videos_photos/jizni_morava.webp" alt="" loading="lazy">
+                </div>
+                <div class="box boxSmall">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>VÁNOČNÍ TRHY</h1>
+                        <p></p>
+                    </div></a>
+                    <img src="/resources/videos_photos/vanocni_trhy.webp" alt="" loading="lazy">
+                </div>
+                <div class="box boxSmall">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>ŠTĚPÁN</h1>
+                        <p></p>
+                    </div></a>
+                    <img src="/resources/videos_photos/blackmagic_2.webp" alt="" loading="lazy"> 
+                </div>
+                <div class="box boxSmall">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>ORLICKÉ HORY</h1>
+                        <p></p>
+                    </div></a>
+                    <img src="/resources/videos_photos/slope.webp" alt="" loading="lazy">
+                </div>
+
+            </div> 
+
+        </div>
+
+        <div id="videoklipy" class="hidden">
+            <div class="bg bg4">
+                <h1>VIDEOKLIPY</h1>
+            </div>
+
+            <div class="boxes">
+
+                <div class="box">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>21 GRAMŮ</h1>
+                        <p>PATOS</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/21_gramu.webp" alt="" loading="lazy">
+                </div>
+                <div class="box boxWeddingSmaller">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>HELLO EVERYBODY</h1>
+                        <p>RAGDOLL</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/hello_everybody.webp" alt="" loading="lazy">
+                </div>
+                <div class="box boxSmall">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>ASSHOLE</h1>
+                        <p>THE TAILS</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/asshole.webp" alt="" loading="lazy">
+                </div>
+                <div class="box boxSmall">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>Agáty (unofficial)</h1>
+                        <p>PETER NAGY</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/agaty.webp" alt="" loading="lazy">
+                </div>
+
+                <div class="box">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>THE OATH</h1>
+                        <p>CRAZZE</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/the_oath.webp" alt="" loading="lazy">
+                </div>
+                <div class="box boxExtraSmaller">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>ROOTS COME UNDONE</h1>
+                        <p>MORTHYS</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/morthys.webp" alt="" loading="lazy">
+                </div>
+                <div class="box boxExtraSmaller">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>KDYŽ MŮŽEŠ, ULEJ VÍC!</h1>
+                        <p>VÍŤŮV BRÁCHA</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/kdyz_nemuzes_tak.webp" alt="" loading="lazy">
+                </div>
+                <div class="box boxExtraSmaller">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>ČERNÁ OVCE RODINY</h1>
+                        <p>BULVAAR</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/cerna_ovce.webp" alt="" loading="lazy">
+                </div>
+
+                <div class="box">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>THE OATH</h1>
+                        <p>CRAZZE</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/prospektori.webp" alt="" loading="lazy">
+                </div>
+                <div class="box boxExtraSmaller">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>KLUCI Z
+                            NEÚSPĚŠNÉ KAPELY</h1>
+                        <p>MORTHYS</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/kluci_z_neuspesne.webp" alt="" loading="lazy">
+                </div>
+                <div class="box">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>PIECES</h1>
+                        <p>SARAH CAO</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/pieces.webp" alt="" loading="lazy">
+                </div>
+                <div class="box boxSmall">
+                    <a href="" target="_blank"><div class="box_hover hide">
+                        <img src="/resources/play.svg" alt="">
+                        <h1>JACK THE RIPPER</h1>
+                        <p>SEPARATOR</p>
+                    </div></a>
+                    <img src="/resources/videos_photos/separator.webp" alt="" loading="lazy">
+                </div>
+
+            </div> 
+
         </div>
     </main>
 
     <footer>
-        <div class="textbox">
-            <div class="email">
-                <h2>damborskytonda@gmail.com</h2>
+        <div class="text">
+            <div class="footer-links">
+                <a href="">//youtube</a>
+                <a href="">//facebook</a>
+                <a href="">//instagram</a>
+                <a href="">//email</a>
             </div>
-            <div class="number">
-                <h2>+420 774 108 098</h2><br>
-                <h3>Prague / Vienna / Čejč (CET)</h3>
+            <div class="footer-contact">
+                <h1>damborskytonda@gmail.com</h1>
+                <h1>+420 774 108 098</h1>
             </div>
         </div>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+
     </footer>
-
-    <div id="socials">
-        <ul>
-            <li><a href="https://www.instagram.com/tonda_damborsky/"><img src="images/socials/instagram.svg" alt=""></a></li>
-            <li class="design">/</li>
-            <li><a href="https://www.facebook.com/tonda.damborsky"><img src="images/socials/facebook.svg" alt=""></a></li>
-            <li class="design">/</li>
-            <li><a href="https://www.youtube.com/@TondaDamborsky"><img src="images/socials/youtube.svg" alt=""></a></li>
-            <li class="design">/</li>
-            <li><a href="mailto:damborskytonda@gmail.com"><img src="images/socials/email.svg" alt=""></a></li>
-
-        </ul>
-    </div>
-    
+ 
+    <script src="script.js"></script>
 </body>
 </html>
